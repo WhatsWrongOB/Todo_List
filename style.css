@@ -1,0 +1,69 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo_container {
+    width:25%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.todo_heading {
+    text-align: center;
+    color: white;
+    background-color: rgb(231, 22, 231);
+}
+
+.middle {
+    text-align: center;
+    height: 10%;
+    margin-top: 20px;
+}
+
+.text {
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    padding: 3px 5px;
+    width: 70%;
+    border-bottom: 2px solid rgb(231, 22, 231);
+}
+
+.plus {
+    color: purple;
+    cursor: pointer;
+}
+
+.lower {
+    height: auto;
+    margin-top: 25px;
+}
+
+li {
+    color: black;
+    margin: 0px 0px 10px 30px;
+    font-size: 1.2rem;
+}
+
+.cross {
+    color: red;
+    margin-left: 90px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.edit {
+    color: green;
+    font-size: 1rem;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.no_items{
+    text-align: center;
+}

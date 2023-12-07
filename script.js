@@ -39,7 +39,7 @@ const deleteTask = (index) => {
 }
 
 const editTask = (index) => {
-    const newTask = document.querySelector(`.list_${index}`).value;
+    const newTask = document.querySelector(`.list_${index}`).innerText;
     const updatedTask = prompt('Edit task', newTask);
 
     if (updatedTask !== null) {

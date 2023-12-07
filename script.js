@@ -55,3 +55,24 @@ const editTask = (index) => {
 }
 
 
+const searchTask = () => {
+
+    const search = document.querySelector('.search').value.toLowerCase();
+
+
+    for (let i = 0; i < tasks.length; i++) {
+
+        const taskElement = document.querySelector(`.list_${i}`);
+
+        if (tasks[i].toLowerCase().includes(search)) {
+            taskElement.style.display = 'block'
+        }
+        else {
+            taskElement.style.display = 'none'
+        }
+    }
+}
+
+
+
+

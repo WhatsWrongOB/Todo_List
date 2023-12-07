@@ -34,8 +34,13 @@ const addTask = () => {
 }
 
 const deleteTask = (index) => {
+
     tasks.splice(index, 1);
     renderTask();
+
+    if (tasks.length == 0) {
+        todoList.innerHTML = `<h3 class='no_items'>No task added</h3>`
+    }
 }
 
 const editTask = (index) => {

@@ -13,7 +13,8 @@
 }
 
 .todo_container {
-    width: 25%;
+    min-width: 25%;
+    max-width: auto;
     height: auto;
     border: 1px solid black;
     border-radius: 6px;
@@ -68,6 +69,12 @@ li {
     font-size: 1rem;
     padding-left: 30px;
     cursor: pointer;
+    margin-right: 30px;
+}
+
+.duplicate {
+    cursor: pointer;
+    margin-right: 10px;
 }
 
 .no_items {

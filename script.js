@@ -16,6 +16,7 @@ const renderTask = () => {
       <li class = 'list_${index}'>${task}
       <i class="fa-solid fa-xmark cross" onClick = 'deleteTask(${index})'></i>
       <i class="fa-regular fa-pen-to-square edit" onClick = 'editTask(${index})'></i> 
+      <i class="fa-regular fa-clone duplicate" onClick = 'duplicateTask(${index})'></i>
       </li>  
       `
         todoList.appendChild(taskElement)
@@ -26,7 +27,10 @@ const addTask = () => {
     const inputText = document.querySelector('.text');
     const newTask = inputText.value;
 
-    if (newTask !== '') {
+    if (newTask == '') {
+        alert('Please Enter some task')
+    }
+    else {
         tasks.push(newTask);
         inputText.value = '';
         renderTask();
@@ -34,10 +38,10 @@ const addTask = () => {
 }
 
 const deleteTask = (index) => {
+    const confirmDelete = window.confirm('Are you sure you want to remove this task?')
 
-    const confirmDelete = confirm('Are you sure you want to remove this task?')
     if (confirmDelete) {
-        tasks.splice(index, 1);
+        tasks.pop(tasks[index]);
         renderTask();
     }
 
@@ -57,6 +61,12 @@ const editTask = (index) => {
 
 }
 
+const duplicateTask = (index) => {
+    const duplicatedTask = tasks[index]
+    tasks.push(duplicatedTask)
+    renderTask()
+
+}
 
 const searchTask = () => {
 
